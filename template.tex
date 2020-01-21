@@ -1,0 +1,91 @@
+\documentclass{documentation}
+
+%-------- Custom package including, please refer to documentation.cls for making permanent changes 
+
+
+%-------- Custom setup --------
+
+
+%-------- Custom definitions --------
+\newcommand{\tightFigure}[3] {
+    \begin{figure}[H]
+        \centering
+        % trim: left lower right upper
+        % \frame{
+         \includegraphics[trim={0cm 0cm 0cm 0cm},clip, width=0.95\textwidth]{#1}
+        % }
+        \caption{#2}
+        #3  % label
+    \end{figure} 
+}
+
+
+%-------- Title --------
+\title{Project name}
+% \author{\itshape Author's name \\ Company \\ \small email}
+\author{
+  Author's name\\
+  Company\\
+  \texttt{Author's email}
+  \and
+  Co-author's name\\
+  Company\\
+  \texttt{Co-author's email}
+}
+\date{\today \\ \small v0.0.1}
+
+
+%-------- Document --------
+\begin{document}
+
+%% Title
+\maketitle
+\thispagestyle{empty} % No number on front page
+\titlepage
+
+%% ToC
+\tableofcontents
+\clearpage
+\setcounter{page}{1} % Start with page 1 after ToC
+
+\section{Nomenclature}
+%\def\arraystretch{1.5}
+\begin{tabular}{l l}
+    Technical word & Explanation \\
+\end{tabular}
+
+%% Content 
+\section{Introduction}
+
+Introduction section ...
+
+\subfile{subfile-folder/subfile1}
+
+
+Reference example \cite{example-reference} 
+\\ \\
+Listing example:
+%\begin{lstlisting}[language=swift,caption={Swift UIViewController boilerplate},captionpos=b,label={lst:viewdidload},basicstyle=\ttfamily\small, breaklines=true]
+%override func viewDidLoad() {
+%    super.viewDidLoad()
+%    
+%    // Do any additional setup after loading the view.
+%}
+%\end{lstlisting}
+
+
+
+\clearpage
+
+\begin{thebibliography}{9}
+
+
+%% Bibliography
+\bibitem{example-reference}
+This is an example reference
+\\\texttt{http://example.com/reference.html}
+
+\end{thebibliography}
+
+
+\end{document}
